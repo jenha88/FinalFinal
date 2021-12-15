@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MVCEF.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List if Students</h2>
+<div class="row">
+
+    @foreach (var student in Model)
+    {
+        <div class="col-4" style="margin-bottom:5px;">
+            <a href="/Students/Details/@student.StudentID" style="text-decoration:none;">
+                <div class="card student" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@student.LastName, @student.FirstName</h5>
+                        <p class="card-text">My favorite color is @student.FavoriteColor</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+ 
+       
+  

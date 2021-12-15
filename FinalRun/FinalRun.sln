@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEF", "MVCEF\MVCEF.csproj", "{07BA6917-E841-4300-8B27-7511A3A23E92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEF2", "MVCEF2\MVCEF2.csproj", "{EEEBD264-438B-413F-AE8B-F2CD3184058B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07BA6917-E841-4300-8B27-7511A3A23E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BA6917-E841-4300-8B27-7511A3A23E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BA6917-E841-4300-8B27-7511A3A23E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BA6917-E841-4300-8B27-7511A3A23E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEBD264-438B-413F-AE8B-F2CD3184058B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEBD264-438B-413F-AE8B-F2CD3184058B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEBD264-438B-413F-AE8B-F2CD3184058B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEBD264-438B-413F-AE8B-F2CD3184058B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA38AF1E-18F9-4989-B74F-BB6A5E696D0A}
+	EndGlobalSection
+EndGlobal

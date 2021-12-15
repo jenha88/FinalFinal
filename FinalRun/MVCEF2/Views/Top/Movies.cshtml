@@ -1,0 +1,91 @@
+﻿@model IEnumerable<MVCEF2.Models.Movie>
+
+@{
+    ViewBag.Title = "Movies";
+    int Rank = 1;
+}
+
+<h2>Top @Model.Count() Movies</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Rank
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gross)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.budget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title_year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imdb_score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Director.Director_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+      <td>
+          @Rank
+      </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+        <td>
+            @item.gross.Value.ToString("C0")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @item.budget.Value.ToString("C0")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title_year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imdb_score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Director.Director_Name)
+        </td>
+
+    </tr>       
+    { Rank += 1; }
+
+}
+
+</table>

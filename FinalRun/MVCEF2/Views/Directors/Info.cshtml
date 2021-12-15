@@ -1,0 +1,18 @@
+﻿@model MVCEF2.Models.Movie
+
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>Info</h2>
+<h4>Director @Model.Director.Director_Name</h4>
+<p> Movies Directed Include:</p>
+
+@foreach (var item in Model.Director.Movies)
+{ 
+
+    <li>
+        <a target="_blank" href="@item.movie_imdb_link"> @item.movie_title </a> that came out in @item.title_year
+    </li>
+}
+
