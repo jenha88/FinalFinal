@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEF", "MVCEF\MVCEF.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEF2", "MVCEF2\MVCEF2.csproj", "{EEEBD264-438B-413F-AE8B-F2CD3184058B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartIDK", "PartIDK\PartIDK.csproj", "{D9080A22-8F0F-4AFD-A48D-40276A75B274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EEEBD264-438B-413F-AE8B-F2CD3184058B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEEBD264-438B-413F-AE8B-F2CD3184058B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEEBD264-438B-413F-AE8B-F2CD3184058B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9080A22-8F0F-4AFD-A48D-40276A75B274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9080A22-8F0F-4AFD-A48D-40276A75B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9080A22-8F0F-4AFD-A48D-40276A75B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9080A22-8F0F-4AFD-A48D-40276A75B274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

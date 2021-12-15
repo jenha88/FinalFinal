@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    string color = "red";
 }
 
 <h2>List if Students</h2>
@@ -11,14 +12,24 @@
     {
         <div class="col-4" style="margin-bottom:5px;">
             <a href="/Students/Details/@student.StudentID" style="text-decoration:none;">
-                <div class="card student" style="width: 18rem;">
+                <div class="card student" style="width: 18rem; background-color:@color ">
                     <div class="card-body">
                         <h5 class="card-title">@student.LastName, @student.FirstName</h5>
                         <p class="card-text">My favorite color is @student.FavoriteColor</p>
                     </div>
                 </div>
             </a>
+           
         </div>
+        if (color == "red")
+        {
+            color = "green";
+        }
+        else
+        {
+            color = "red";
+        }
+
     }
 </div>
  

@@ -53,7 +53,7 @@
           @Rank
       </td>
         <td>
-            @Html.DisplayFor(modelItem => item.duration)
+            @Html.DisplayFor(modelItem => item.duration) minutes
         </td>
         <td>
             @item.gross.Value.ToString("C0")
@@ -62,7 +62,7 @@
             @Html.DisplayFor(modelItem => item.genres)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.movie_title)
+            <a target="_blank"href=@item.movie_imdb_link style="text-decoration:none">@item.movie_title</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.language)
