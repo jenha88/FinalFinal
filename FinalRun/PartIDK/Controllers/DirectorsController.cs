@@ -34,85 +34,18 @@ namespace PartIDK.Controllers
             }
             return View(director);
         }
-
-        // GET: Directors/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Directors/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Director_Name,Director_Id")] Director director)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Directors.Add(director);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(director);
-        }
-
-        // GET: Directors/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Info(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Director director = db.Directors.Find(id);
+            Movie director = db.Movies.Find(id);
             if (director == null)
             {
                 return HttpNotFound();
             }
             return View(director);
-        }
-
-        // POST: Directors/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Director_Name,Director_Id")] Director director)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(director).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(director);
-        }
-
-        // GET: Directors/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Director director = db.Directors.Find(id);
-            if (director == null)
-            {
-                return HttpNotFound();
-            }
-            return View(director);
-        }
-
-        // POST: Directors/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Director director = db.Directors.Find(id);
-            db.Directors.Remove(director);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

@@ -1,0 +1,20 @@
+﻿@model PartIDK.Models.Movie
+
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>Info</h2>
+<h3>Director @Model.Director.Director_Name</h3>
+Movies directed include :
+
+@foreach (var item in Model.Director.Movies) {
+   
+<li>
+    <a target="_blank" href="@item.movie_imdb_link"style="text-decoration:none"> @item.movie_title </a> that came out in @item.title_year
+</li>
+           
+       
+}
+
+

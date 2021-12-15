@@ -1,0 +1,59 @@
+﻿@model IEnumerable<PartIDK.Models.Anime>
+
+@{
+    ViewBag.Title = "Animes";
+    int Rank = 1;
+}
+
+<h2>Top @Model.Count() Animes</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Rank
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.episodes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rating)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Rank
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.episodes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rating)
+        </td>
+        
+    </tr>      { Rank += 1; }
+}
+
+</table>

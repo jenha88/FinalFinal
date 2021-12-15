@@ -10,33 +10,34 @@ using PartIDK.Models;
 
 namespace PartIDK.Controllers
 {
-    public class MoviesController : Controller
+    public class TopController : Controller
     {
         private DB_128040_practiceEntities db = new DB_128040_practiceEntities();
 
-        // GET: Movies
+        // GET: Top
         public ActionResult Index()
         {
-            var movies = db.Movies.Include(m => m.Director).OrderByDescending(m=>m.gross);
-            return View(movies.ToList());
+            return View(db.Animes.ToList());
         }
 
-        // GET: Movies/Details/5
-        public ActionResult Details(int? id)
+        // GET: Top/Details/5
+        public ActionResult Animes(int? id)
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                var animes = db.Animes.OrderByDescending(m => m.rating).Take(10);
+                return View(animes);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+
+            var an = db.Animes.OrderByDescending(m => m.rating).Take((int)id);
+            if (an == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(an);
         }
 
-
+  
         protected override void Dispose(bool disposing)
         {
             if (disposing)

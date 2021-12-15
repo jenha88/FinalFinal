@@ -4,11 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Movies</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -58,9 +55,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.plot_keywords)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.movie_imdb_link)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.num_user_for_reviews)
@@ -122,7 +116,15 @@
             @Html.DisplayFor(modelItem => item.actor_1_facebook_likes)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.gross)
+            @if (item.gross.HasValue)
+            {
+                @item.gross.Value.ToString("C0")
+            }
+            else
+            {
+                <p>$0.00</p>
+            }
+
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.genres)
@@ -131,7 +133,7 @@
             @Html.DisplayFor(modelItem => item.actor_1_name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.movie_title)
+            <a target="_blank" href="@item.movie_imdb_link" style="text-decoration:none">@item.movie_title</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.num_voted_users)
@@ -149,9 +151,6 @@
             @Html.DisplayFor(modelItem => item.plot_keywords)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.movie_imdb_link)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.num_user_for_reviews)
         </td>
         <td>
@@ -164,7 +163,14 @@
             @Html.DisplayFor(modelItem => item.content_rating)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.budget)
+            @if (item.budget.HasValue)
+            {
+                @item.budget.Value.ToString("C0")
+            }
+            else
+            {
+                <p>$0.00</p>
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.title_year)
@@ -184,11 +190,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Director.Director_Name)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Movie_Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Movie_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Movie_Id })
-        </td>
+      
     </tr>
 }
 

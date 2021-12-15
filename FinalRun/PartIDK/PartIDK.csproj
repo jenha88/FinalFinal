@@ -129,6 +129,7 @@
     <Compile Include="Controllers\DirectorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\TopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -232,6 +233,10 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Directors\Details.cshtml" />
     <Content Include="Views\Directors\Index.cshtml" />
+    <Content Include="Views\Directors\Info.cshtml" />
+    <Content Include="Views\Top\Details.cshtml" />
+    <Content Include="Views\Top\Index.cshtml" />
+    <Content Include="Views\Top\Animes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
